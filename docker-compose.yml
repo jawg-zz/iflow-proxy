@@ -1,12 +1,8 @@
 services:
   iflow-proxy:
-    image: node:20-alpine
-    working_dir: /app
-    command: sh -c "npm install && node proxy.js"
+    build: .
     ports:
       - "4891:4891"
     environment:
       - IFLOW_API_KEY=sk-3efa8ea84a35d6ee5359a2360f6d882d
     restart: unless-stopped
-    volumes:
-      - ./proxy.js:/app/proxy.js:ro
