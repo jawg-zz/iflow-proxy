@@ -1,0 +1,8 @@
+services:
+  iflow-proxy:
+    build: .
+    ports:
+      - "4891:4891"
+    environment:
+      - IFLOW_API_KEY=sk-3efa8ea84a35d6ee5359a2360f6d882d
+    restart: unless-stopped
