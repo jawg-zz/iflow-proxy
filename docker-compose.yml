@@ -1,4 +1,6 @@
 services:
   iflow-proxy:
     build: .
+    environment:
+      - IFLOW_API_KEY=${IFLOW_API_KEY}
     restart: unless-stopped
