@@ -1,6 +1,4 @@
 services:
   iflow-proxy:
     build: .
-    ports:
-      - "4891"
     restart: unless-stopped
